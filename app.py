@@ -101,7 +101,7 @@ app.layout = html.Div(
                 html.Div(
                     #Description
                     id = "description",
-                    className="description-tracker"
+                    className="description_ticker"
                 ),
                 html.Div(
                     [
@@ -156,6 +156,7 @@ def update_data(n, val):
             inf = ticker.info 
             df = pd.DataFrame().from_dict(inf, orient="index").T
             df[['logo_url', 'shortName', 'longBusinessSummary']]
+            print (df['longBusinessSummary'].values[0])
             return df['longBusinessSummary'].values[0], df['logo_url'].values[0], df[ 'shortName'].values[0], None, None, None
 
 #State allows you to pass along extra values without firing the callbacks.
