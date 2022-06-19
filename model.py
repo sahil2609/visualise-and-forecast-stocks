@@ -54,9 +54,9 @@ def prediction(stock, n_days):
     grid_result = gsc.fit(x_train, y_train)
     best_params = grid_result.best_params_
     best_svr = SVR(kernel='rbf',C=best_params["C"], epsilon=best_params["epsilon"], gamma=best_params["gamma"], max_iter=-1)
-    best_svr.fit(x_train, y_train)
-    svm_confidence = best_svr.score(x_train, y_train)
-    print(svm_confidence)
+    # best_svr.fit(x_train, y_train)
+    # svm_confidence = best_svr.score(x_train, y_train)
+    # print(svm_confidence)
 
     # Support Vector Regression Models
 
